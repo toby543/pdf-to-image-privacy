@@ -31,22 +31,25 @@
 <header>
   <div class="wrap">
     <h1>Privacy Policy</h1>
-    <p>PDF to Image &middot; Last updated: 9 October 2026</p>
+    <p>PDF to Image &middot; Last updated: 19 October 2026</p>
   </div>
 </header>
 <main>
   <section>
-    <p>PDF to Image converts PDF files into images on your own device. This page explains what the app does
-    and does not do with your information.</p>
+    <p>PDF to Image works with PDFs on your own device: it reads them, converts them to images, lets you edit,
+    fill in and sign them and save a new PDF, scans paper documents, and turns photos into a PDF. This page
+    explains what the app does and does not do with your information.</p>
   </section>
 
   <section>
     <h2>What the app does with your data</h2>
     <ul>
-      <li><strong>Your PDFs and the images made from them never leave your device.</strong> All conversion
-        happens locally. The app does not upload files, and it has no account, sign-in or server.</li>
+      <li><strong>Your PDFs and the images made from them never go to the internet.</strong> All conversion
+        happens on your phone. The app has no account, sign-in or online server, and never uploads files anywhere.</li>
       <li><strong>No data is collected.</strong> The app does not collect, store, share or sell personal
-        information, and it contains no advertising, analytics or tracking libraries.</li>
+        information, and it contains no advertising or analytics of its own. The document scanner is provided by
+        Google's ML Kit library, which includes Google's own usage-logging component. The app removes that
+        component's only way of sending data, so it cannot send anything from this app.</li>
       <li><strong>Passwords you enter</strong> to open protected PDFs are used only in memory while
         converting. They are never saved or sent anywhere.</li>
       <li><strong>Settings</strong> (format, quality, resolution, page range, chosen folder) are stored only
@@ -54,13 +57,27 @@
       <li><strong>App lock</strong> (optional) uses Android's own unlock screen: fingerprint, face, or your
         PIN, pattern or password. The app never sees, receives or stores your biometric data or your screen
         lock.</li>
-      <li><strong>Page editing and signatures:</strong> edits you make before converting (rotation, removed pages,
-        drawings, text, a signature, crops and redactions) and any signature you draw (unless you choose to remember it, see below) are kept only in the phone's
-        memory while the app is open. They are never saved to storage or sent anywhere, and your original PDF is
-        not changed.</li>
-      <li><strong>Scanning:</strong> the scan card uses Google's document scanner, which runs on your phone through Google Play services. This app does not request camera or internet permission. Scanned pages go only where you save them (a PDF you name, your Photos gallery, or a folder you pick) and are removed from the app's private storage when you leave the scan screen. Google Play services may download the scanner component itself; that is handled by Google, not by this app.</li>
+      <li><strong>Editing, form filling and signatures:</strong> while you edit (rotating, removing or reordering
+        pages, drawing, highlighting, adding or changing text, filling in forms, signing, cropping and redacting),
+        your changes and any signature you draw (unless you choose to remember it, see below) are kept only in the
+        phone's memory. Nothing is saved or sent anywhere until you choose <em>Save as PDF</em> or
+        <em>Convert to images</em>, and then only to the place you pick. Your original PDF is never changed.
+        Text you type in the editor is marked so your keyboard does not learn it.</li>
+      <li><strong>Images to PDF:</strong> the app reads only the pictures you pick and writes the new PDF only
+        where you choose to save it.</li>
+      <li><strong>Scanning:</strong> the scan card uses Google's document scanner, which runs on your phone through Google Play services. This app does not request camera permission. Scanned pages go only where you save them (a PDF you name, your Photos gallery, or a folder you pick) and are removed from the app's private storage when you leave the scan screen. Google Play services may download the scanner component itself; that is handled by Google, not by this app.</li>
       <li><strong>Saved signature (optional):</strong> only if you tick "Remember on this phone", your signature is stored on your phone, encrypted with a key kept in the Android Keystore. It is never backed up, shared or sent anywhere. Delete it at any time in Security &rsaquo; Forget my saved signature, or by uninstalling the app.</li>
       <li><strong>Reading PDFs:</strong> the reader opens the file you choose and shows it on screen only. It keeps no history of what you read, saves nothing and sends nothing anywhere.</li>
+      <li><strong>Use on a laptop (optional):</strong> only while you switch it on, the app runs a small web page on
+        your phone that a web browser on the <em>same Wi-Fi network</em> can open. The browser must first type a
+        one-time 6-digit code shown on your phone. Files you send from the laptop travel directly between the laptop
+        and your phone over your Wi-Fi; they are processed on the phone and the results are downloaded to the
+        laptop. If you choose to share phone folders with the laptop (in Use on a laptop &rsaquo; Share a folder), the
+        laptop can also open files from those folders and save results into them, and nothing else on the phone;
+        you can stop sharing a folder at any time. Nothing is sent to the internet, to us or to anyone else. Files sent from the laptop are kept in
+        the app's private storage only while the link is on and are deleted when it switches off, which it does by
+        itself after 30 minutes without use. The connection on your Wi-Fi is not encrypted, so only use this feature
+        on networks you trust, such as your home Wi-Fi.</li>
       <li><strong>Security choices</strong> (app lock on or off, hide from screenshots, clear password) are
         stored only on your device.</li>
     </ul>
@@ -69,17 +86,26 @@
   <section>
     <h2>Permissions</h2>
     <ul>
-      <li><strong>Files you choose</strong> &ndash; the app reads only the PDFs you pick or share to it, and
-        writes images only to the gallery (Pictures/PDF to Image) or to a folder you choose.</li>
+      <li><strong>Files you choose</strong> &ndash; the app reads only the PDFs and pictures you pick or share to
+        it, and writes images only to the gallery (Pictures/PDF to Image) or to a folder you choose, and PDFs only to
+        the place you choose when saving.</li>
       <li><strong>Notifications</strong> (optional) &ndash; to show conversion progress. The app works
         without this permission.</li>
       <li><strong>Foreground service (data sync)</strong> &ndash; keeps a conversion running if you switch
         to another app.</li>
       <li><strong>Biometric / fingerprint</strong> (optional) &ndash; only so the app lock can show Android's
         unlock screen. Nothing is read from or sent anywhere.</li>
+      <li><strong>Full network access</strong> &ndash; used only by the optional <em>Use on a laptop</em> feature, so a
+        browser on your own Wi-Fi can reach the phone while you have it switched on. The app does not connect to the
+        internet.</li>
+      <li><strong>Prevent phone from sleeping</strong> &ndash; keeps Wi-Fi awake while <em>Use on a laptop</em> is on,
+        so the laptop doesn't lose the connection.</li>
+      <li><strong>View network connections</strong> &ndash; required by Google's scanner library so it can schedule
+        its background work. It only lets the app see whether a connection exists; it cannot send or receive
+        data.</li>
     </ul>
-    <p class="muted">The app does not request internet access, so it cannot send your files or any other
-    data anywhere.</p>
+    <p class="muted">The app never sends your files or any other data to the internet. Its network access is
+    used only for the laptop link on your own Wi-Fi, and only while you have it switched on.</p>
   </section>
 
   <section>
