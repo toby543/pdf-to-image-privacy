@@ -66,6 +66,16 @@
       <li><strong>Images to PDF:</strong> the app reads only the pictures you pick and writes the new PDF only
         where you choose to save it.</li>
       <li><strong>Scanning:</strong> the scan card uses Google's document scanner, which runs on your phone through Google Play services. This app does not request camera permission. Scanned pages go only where you save them (a PDF you name, your Photos gallery, or a folder you pick) and are removed from the app's private storage when you leave the scan screen. Google Play services may download the scanner component itself; that is handled by Google, not by this app.</li>
+      <li><strong>OCR scanner:</strong> the OCR scanner reads the text in pictures, camera scans and scanned PDFs that you choose.
+        The reading is done on your phone by text-recognition models that are part of the app, so it works offline and
+        nothing is uploaded or sent anywhere. The page pictures are kept in the app's private storage only while you
+        look at the result, and are deleted when you leave the screen. The text goes only where you send it: copied,
+        shared or emailed by you, or saved as a text file or a searchable PDF in the place you choose.</li>
+      <li><strong>Translate (optional):</strong> only if you tap "Translate with Google Translate" in the OCR scanner,
+        the text shown on that screen is handed to Google Translate, Google's online translation service: the Google
+        Translate app if it is installed, otherwise the Google Translate website (at most 5,000 characters). The app
+        asks you before the first time. Google's own privacy policy then applies to that text. Nothing else is sent,
+        and nothing is sent unless you tap the button.</li>
       <li><strong>Saved signature (optional):</strong> only if you tick "Remember on this phone", your signature is stored on your phone, encrypted with a key kept in the Android Keystore. It is never backed up, shared or sent anywhere. Delete it at any time in Security &rsaquo; Forget my saved signature, or by uninstalling the app.</li>
       <li><strong>Reading PDFs:</strong> the reader opens the file you choose and shows it on screen only. It keeps no history of what you read, saves nothing and sends nothing anywhere.</li>
       <li><strong>Use on a laptop (optional):</strong> only while you switch it on, the app runs a small web page on
@@ -104,7 +114,7 @@
         its background work. It only lets the app see whether a connection exists; it cannot send or receive
         data.</li>
     </ul>
-    <p class="muted">The app never sends your files or any other data to the internet. Its network access is
+    <p class="muted">The app never sends your files or any other data to the internet; the only exception is text you choose to hand to Google Translate from the OCR scanner, which goes through the Google Translate app or your browser. Its network access is
     used only for the laptop link on your own Wi-Fi, and only while you have it switched on.</p>
   </section>
 
